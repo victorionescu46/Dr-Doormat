@@ -1,0 +1,26 @@
+<span class="required">*Test Mode</span><br>
+<?php 
+
+
+
+try{
+	
+	if (!$this->hasData('product')) {
+		$this->setData('product', Mage::registry('product'));
+	}
+	$product = $this->getData('product');
+	
+	foreach ($product->_data as $z)
+		{
+			echo $z;
+			}
+	
+}
+catch(exception $e)
+{
+	echo $e->getMessage();
+}
+
+?>
+
+

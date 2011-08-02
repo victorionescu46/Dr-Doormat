@@ -1,0 +1,93 @@
+<?php
+$loader = new Wdc_QuickOrder_Block_Loader();
+$sid = $loader->getSessionId()
+
+
+?>
+<script type="text/javascript"> 
+
+function stopRKey(evt) { 
+  var evt = (evt) ? evt : ((event) ? event : null); 
+  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null); 
+  if ((evt.keyCode == 13) && (node.type=="text"))  {
+//alert('The Enter Key does absolutly nothing...error id10t');
+
+return false;} 
+} 
+
+document.onkeypress = stopRKey; 
+
+
+</script>
+<div class="col-left-quickorder">
+<div class="sidebar">
+<div class="block block-layered-nav">
+<div class="block-title">
+<h2>Related Item's</h2>
+</div>
+<div class="block-content">
+<div id="skulike"></div>
+</div>
+</div>
+
+<div class="block block-layered-nav">
+<div class="block-title">
+<h2>Saved Lists</h2>
+</div>
+<div class="block-content">
+<div id="mylist"></div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="col-main-quickorder">
+<form post="quickorder">
+<table class="data-table"><tr><td colspan="2">
+<div class="left">Enter item number and click Search or hit tab (Click the Question button at the right for more help)</div><div id="addcart" class="right">
+<img src="/skin/frontend/default/midwest/images/media/HelpIcon.gif" alt="Quick Order Help" onclick="toggleVisibility(true,document.getElementById('OrderHelp'))" class="clickimage" height="50" alt="Item Lookup" />
+</div>
+
+<div id="OrderHelp" class="block-FAQ">
+<div class="block block-layered-nav">
+<div class="block-title">
+<h2>Quick Order Help</h2>
+</div>
+<div class="block-content">
+<h2>How to use the Quick Order Form</h2><p>
+The Quick Order Form is intended for customers who prefer to use a <a href="">Midwest Catalog</a> and want to enter their order by using the item number listed in
+the catalog. You can simply click on the Item# scan button or hit tab and your item will appear to the right of the box. If this is the item you desire, 
+simply click the "Add to list" button. You will also notice a number of related Item#'s that appear as a list to the left. You can hit as many of the "ADD
+buttons and these will appear on your Quick Order list. </p><p>
+Once you are satisfied with the items you have selected, you can click on the "Add to Cart" button at the bottom of your list. This will place all the items
+in your Quick Order list into the shopping cart. (Your QuickOrder List will then be deleted.) You can then check out or continue to shop in the Midwest Supplies Website. 
+<br/><i>Always remember to thank David Wilhelm for all of his hard work.--That means you Paula</i></p>
+</div>
+</div>
+
+<a class="close-link" onclick="toggleVisibility(false,document.getElementById('OrderHelp'))">X Close</a>
+
+
+
+</div>
+
+</td></tr>
+<tr class="even">
+<td width="20%" valign="middle" >
+<input id="sku" type="text" size="10" value="Enter Item#" onfocus="ClearBox();"; onblur="skuLookup(document.getElementById('sku').value)" />
+<img src="/skin/frontend/default/midwest/images/buttons/top_search.gif" class="clickimage" alt="Item Lookup" /></td>
+<td width="80%"><div id="skuid"></div></td>
+</tr>
+
+<tr height="10"><td colspan="2"><hr noshade="true" /></td></tr>
+
+</table>
+<div id="list">
+<?php
+
+echo $loader->getOrderList();
+
+?>
+</div>
+</form>
+</div>

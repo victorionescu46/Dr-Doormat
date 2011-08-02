@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+<config>
+  <modules>
+    <Wdc_Checkout>
+      <active>false</active>
+      <codePool>local</codePool>
+    </Wdc_Checkout>
+  </modules>
+</config>

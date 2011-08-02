@@ -1,0 +1,19 @@
+<?php $block = new Wdc_Cms_Block_Block() ?>
+<?php $content = $block->getFrontPageContent() ?>
+<?php if($content): ?>
+<?php $i=0; ?>
+<?php foreach ($content as $items): ?>
+	
+		<div class="col1-wrapper">
+		<?php echo $items['content'] ?>
+		</div>
+<?php $i++;  ?>	
+<?php endforeach; ?>
+<?php endif; ?>
+<?php if($i % 2): ?>
+<div class="col1-wrapper">
+
+<object width="360" height="180"><param name="movie" value="http://www.youtube.com/v/eH3GH7Pn_eA&hl=en&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/eH3GH7Pn_eA&hl=en&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="360" height="180"></embed></object>
+
+</div>
+<?php endif; ?>

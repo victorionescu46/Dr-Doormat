@@ -1,0 +1,28 @@
+<?php
+
+
+
+
+
+?>
+
+<?php
+
+
+$subject = 'This music Sucks';
+$search = 'Sucks';
+
+echo str_replace($search, '', $subject);
+
+function SubColCount()
+{
+	if(!isset($_SESSION['subcnt']))
+		{
+		$_SESSION['subcnt'] = 0;	
+		}	
+	return $_SESSION['subcnt']++;	
+}
+
+echo SubColCount();
+
+?>

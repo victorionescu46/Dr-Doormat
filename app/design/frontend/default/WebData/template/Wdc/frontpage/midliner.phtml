@@ -1,0 +1,23 @@
+<div class="midline-block-wrapper">
+<?php $block = new Wdc_Cms_Block_Block() ?>
+<?php $content = $block->getMiddleContent() ?>
+<?php if($content): ?>
+<?php $i=0; ?>
+<?php foreach ($content as $items): ?>
+	
+		<div class="midline-block">
+		<?php echo $items['content'] ?>
+		</div>
+<?php $i++;  ?>	
+<?php endforeach; ?>
+<?php endif; ?>
+<?php if($i < 4): ?>
+<?php for ($j = $i; $j < 4; $j++): ?>
+<div class="midline-block">
+<h2>This box contains content that has expired</h2>
+<h4>Please type 4387 and hit refresh on your browser 4 times. Stand up on your chair and turn in a circle. Finally you need to
+"Yelp" 7 times with a smile.</h4>
+</div>
+<?php endfor; ?>
+<?php endif; ?>
+</div>

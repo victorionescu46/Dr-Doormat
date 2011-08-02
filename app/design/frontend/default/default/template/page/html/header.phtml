@@ -1,0 +1,49 @@
+<?php
+/**
+* @category    design
+* @package     base_default
+* @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+* @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*/
+/**
+* @var Mage_Page_Block_Html_Header $this
+*/
+?>
+<div id="header">
+  <div id="header-outer">
+    <div class="inner">
+      <h1 id="identity"><a href="http://beta.drdoormat.com/index.html">Dr Doormat</a></h1>
+      <div id="navigation">
+        <ul id="menu">
+          <li><a href="http://beta.drdoormat.com/about.html">about</a></li>
+          <li><a href="http://beta.drdoormat.com/story.html">our story</a></li>
+          <li><a href="http://beta.drdoormat.com/choose-your-mat.html">Choose your mat</a></li>
+          <li><a href="http://beta.drdoormat.com/how-it-works.html">How it works</a></li>
+          <li><a href="http://beta.drdoormat.com/eco-friendly.html">Eco-friendly</a></li>
+          <li><a href="http://beta.drdoormat.com/testimonials.html">testimonials</a></li>
+          <li><a href="http://beta.drdoormat.com/tips.html">home tips</a></li>
+          <li><a href="http://beta.drdoormat.com/faq.html">faq</a></li>
+          <li><a href="http://beta.drdoormat.com/press.html">press</a></li>
+          <li><a href="http://beta.drdoormat.com/contact.php">contact</a></li>
+        </ul><!-- /#menu-->
+
+        <ul id="share-links">
+          <li>SHARE</li>
+          <li id="fb-ico"><a href="http://www.facebook.com/sharer.php?u=<?php echo $this->helper('core/url')->getCurrentUrl(); ?>&t=<?php echo $this->getLayout()->getBlock('head')->getTitle(); ?>"></a></li>
+          <li id="tw-ico"><a href="http://twitter.com/home?status=Check this out <?php echo $this->getLayout()->getBlock('head')->getTitle(); ?> <?php echo $this->helper('core/url')->getCurrentUrl(); ?>"></a></li>
+          <li id="mail-ico"><a href="#"></a></li>
+        </ul><!-- /#share-links-->
+        <div class="clear"></div>
+
+        <a href="#" id="header-buy-btn"></a>
+        <ul id="order-menu">
+          <li id="order-status"><a href="<?php echo Mage::getBaseUrl(); ?>customer/account/login/">Order Status</a></li>
+          <li id="my-account"><a href="<?php echo Mage::getBaseUrl(); ?>customer/account">My Account</a></li>
+          <li id="view-cart"><a href="<?php echo Mage::getBaseUrl(); ?>checkout/cart">View Cart</a></li>
+        </ul><!-- /order-menu-->
+      </div><!-- /#navigation-->
+    </div>
+  </div>
+</div><!-- /#header-->
+
+

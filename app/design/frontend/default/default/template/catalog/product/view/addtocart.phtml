@@ -1,0 +1,27 @@
+<?php
+/**
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+
+<?php $_product = $this->getProduct() ?>
+
+<?php if($_product->isSaleable()): ?>
+    <div class="add-to-cart">
+        <?php if(!$_product->isGrouped()): ?>
+          <div id="quantity-field">
+            <div class="left"><label for="qty"><?php echo $this->__('QUANTITY:') ?></label>
+            <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getMinimalQty($_product) ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty" /></div>
+            <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="fancy" onclick="productAddToCartForm.submit()"><?php echo $this->__('Buy now!') ?></button>
+            <div class="clear"></div>
+          </div><!-- quantity field-->
+        <?php endif; ?>
+
+       
+        <?php echo $this->getChildHtml('', true, true) ?>
+    </div>
+<?php endif; ?>

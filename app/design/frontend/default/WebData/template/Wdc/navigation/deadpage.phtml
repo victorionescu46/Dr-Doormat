@@ -1,0 +1,14 @@
+<?php
+if(isset($_GET['url']))
+{	
+	$pageUrl = str_ireplace('_html', 'asp', $_GET['url']);	
+	
+	$helper = new Wdc_Cms_Helper_LinkFinder();
+	
+	header($helper->setUrl($pageUrl));
+	exit;
+	
+}
+
+
+?>
