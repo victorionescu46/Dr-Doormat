@@ -180,8 +180,9 @@
           <h3>dr. doormat, inc.</h3>
           <p class="clearfix"><span><b>Mail:</b></span>
             <span>Dr. Doormat, Inc <br />  
-            11508 Cushman Road<br />
-            Rockville, MD 20852<br /></span>
+            11140 Rockville Pike<br />
+            Suite 100, #233<br />
+            Rockville, MD 20852-3148</span>
           </p><br />
           <p class="clearfix"><span><b>Phone:</b></span>
           <span>301-770-2002</span>  
