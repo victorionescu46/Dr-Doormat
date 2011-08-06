@@ -1,9 +1,0 @@
-﻿<?xml version="1.0"?>
-<config>
-  <modules>
-    <Wdc_Faq>
-      <active>false</active>
-      <codePool>local</codePool>
-    </Wdc_Faq>
-  </modules>
-</config>

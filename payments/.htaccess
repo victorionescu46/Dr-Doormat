@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName secured
-AuthUserFile /etc/doormat.passwd
-Require valid-user
