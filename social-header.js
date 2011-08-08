@@ -4,4 +4,5 @@ function facebook_share(){
 
 $('#fb-share-trigger').click(function(evt){
 	facebook_share();
+	return false;
 });
