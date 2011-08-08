@@ -1,5 +1,5 @@
 function social_pop_up(social_url, social_window_id){
-	window.open(social_url, social_window_id, 'width=400, height=400, scrollbars=yes');
+	window.open(social_url, social_window_id, 'width=500, height=400, scrollbars=yes');
 }
 
 jQuery(document).ready(function(){
