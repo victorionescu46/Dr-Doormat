@@ -3,18 +3,18 @@ function social_pop_up(social_url, social_window_id){
 }
 
 document.ready = function(){
-	document.getElementById('fb-share-trigger').onclick = function(){
+	document.getElementById('fb-share-trigger').onclick = function(evt){
+		evt.preventDefault();
 		social_pop_up('http://www.facebook.com/sharer.php?u=http://beta.drdoormat.com/index.html', 'fbsharewindow');
-		return false;
 	}
 
-	document.getElementById('tw-share-trigger').onclick = function(){
+	document.getElementById('tw-share-trigger').onclick = function(evt){
+		evt.preventDefault();
 		social_pop_up('http://twitter.com/home?status=Check this out http://beta.drdoormat.com/index.html', 'twsharewindow');
-		return false;
 	}
 
-	document.getElementById('newsletter-trigger').onclick = function(){
+	document.getElementById('newsletter-trigger').onclick = function(evt){
+		evt.preventDefault();
 		social_pop_up('http://visitor.r20.constantcontact.com/d.jsp?llr=w6uwdydab&p=oi&m=1103542047670', 'newsletterwindow');
-		return false;
 	}
 }
