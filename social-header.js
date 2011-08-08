@@ -3,6 +3,5 @@ function facebook_share(){
 }
 
 $('#fb-share-trigger').click(function(evt){
-	evt.preventDefault();
 	facebook_share();
 });
